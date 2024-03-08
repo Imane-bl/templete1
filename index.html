@@ -15,18 +15,23 @@
         <div class="logo">
             <img src="img/logoo.png" alt=""/>
         </div>
-        <div class="lines">
+
+        <div class="links">
+        <div class="lines" onmouseover="mOver(this)"  >
             <span></span>
             <span></span>
             <span></span>
         </div>
-       <ul>
-        <i><a href="#"></a>Servecies</i>
-        <i><a href="#"></a>Contact</i>
-        <i><a href="#"></a>About</i>
-        <i><a href="#"></a>More</i>
+     
+        
+       <ul onmouseout="mOut(this)">
+        <li><a href="Servecies"></a>Serveces</li>
+        <li><a href="Porfilio"></a>Porfilio</li>
+        <li><a href="About"></a>About</li>
+        <li><a href="Contact"></a>Contact</li>
        </ul>
 
+</div>
     </div>
     <div class="back">
     <div class="first-page">
@@ -113,14 +118,49 @@
 
  
 
+    
+       
+
+    </div> 
+
+    <!--portfolio page -->
+ 
+
+    <div class="portfolio-page"> 
       <div class="section">
         <h1>Portfolio</h1>
         <p>If you do it right, it will last forever.
 
         </p>
           </div>  
+      <div class="card">
+        <img  class="im1"src="img/portfolio-1.jpg" alt=""/>
 
-          <div class="section">
+        <div class="space">
+
+                      <h4>Project Here</h4> 
+       <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+      </div>
+</div> 
+      <div class="card">
+        <img  class="im2" src="img/portfolio-2.jpg" alt=""/>
+        <div class="space">
+        <h4>Project Here</h4> 
+        <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+       </div>
+      </div>
+
+
+       <div class="card">
+        <img class="im3" src="img/portfolio-3.jpg" alt=""/>
+        <div class="space">
+        <h4>Project Here</h4> 
+        <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+       </div>
+      </div>
+    </div> 
+    
+    <div class="section">
             <h1>About</h1>
             <p>Less is more work</p>
               </div>  
@@ -128,9 +168,8 @@
     <h1>contact</h1>
     <p>Don't be busy, be productive</p>
       </div> 
-
-    </div> 
 </div>
 </div>
 </body>
+<script src="main.js"></script>
 </html>

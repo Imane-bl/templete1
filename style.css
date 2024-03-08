@@ -25,10 +25,36 @@
     font-family: "Work Sans", sans-serif;
   }
 .container{
-    width: 600px;
+
     height: auto;
     padding:0 15px;
+    margin-right: auto;
 }
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+
+
+
+
+
   .container .header {
     display: flex;
     align-items: center;
@@ -43,31 +69,46 @@
     margin: 0 20px;
 
   }
+  .links{
+    position: relative;
+  }
+
+.lines{
+  width:30px;
+  display: flex;
+  flex-wrap: wrap;
+   justify-content: flex-end;
+   transition: 0.3s;
+}
 
   /* for icon */
   .lines :first-child,
     .lines :last-child{
-    border-top:  3px  solid red;
-    width:25px;
+    border-top:  3px  solid rgb(14, 13, 13);
+    width:100%;
     
-    display: block; /* Ensures the span is treated as a block element */
+
     padding: 2px;
   }
   .lines :nth-child(2){
-    width:0;
+    width:60%;
+    transition : 0.3s;
+  
+    border-top: 3px  solid rgb(10, 10, 10);
    
-    border-top: 0px  solid red;
-    
-    display: block; /* Ensures the span is treated as a block element */
     padding: 2px;
   }
+  .links:hover .lines span:nth-child(2){
+width:100%;
+  }
+  /*
   .lines :nth-child(2):hover{
     cursor: pointer;
     border-top:3px  solid red;
-    width:25px;
+    width:100%;
  
  
-  }
+  }*/
   .container .back{
     position: relative;
  
@@ -98,27 +139,61 @@ margin-top: 10px;;
     opacity: 0.6;
   }
 
-  .header ul {
-    display:hidden;
-    list-style: none; /* Remove default list styles */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Use flexbox for layout */
+   .header .links  ul {
+    transition: 0.3s;
+    background-color:var(--section-background);
+    height:170px;
+    position: absolute;
+    right:0;
+    min-width: 200px;
+    top:169%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+      list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    z-index: 1;
+  visibility: hidden;
+  
+  }
+
+  .header .links  ul:after{
+    content:"";
+    position: absolute;
+    top:-8px;
+    right:4px;
+    width:20px;
+    height:20px;
+    background-color: var(--section-background);
+    border-radius: 0%;
+    transform: rotate(45deg);
+  
+  }
+
+ .header .links  ul li  {
+ padding:12.1px;
+ border-bottom: 2px solid rgba(124, 124, 124, 0.158) ;
+  transition: 0.4s;
+ 
+  }
+
+  .header .links  ul li:hover{
+   
+  padding-left:25px;
+   
+    cursor: pointer;
+
+  }
+  .header .links  .active{
+    visibility: visible;
+    
   }
   
-  .header ul li {
-    margin-right: 15px; /* Adjust spacing between list items */
-  }
+
   
-  .header ul li a {
-    text-decoration: none; /* Remove underline from links */
-    color: #77eb29;
-  }
-  
-  /* Optional: Adjust the font size for the links */
-  .header a {
-    font-size: 16px; /* Adjust the value as needed */
-  }
+
+ 
+
 
   /* SOUS PAGE */
   .sous-first-page{
@@ -222,8 +297,63 @@ margin-top: 10px;;
     gap :12px;
   }
 
+  /*portfolio page */
 
+  .portfolio-page{
+    display: grid;
+   /*
+    grid-template-columns:auto   ;
+    grid-template-rows:  auto auto  ;
+    */
+    height: 600px;
+    gap:10px;
+    background-color:#f6f6f6; 
+  }
 
+  .portfolio-page .section {
+ 
+    grid-column: span 8; /* Chaque élément occupe une colonne */
+    grid-row: 1; /* Tous les éléments sont sur la première ligne */
+  }
+  
+  /* Styles pour les éléments dans la deuxième ligne */
+  .portfolio-page .card {
+   
+    grid-column: span 3; /* Chaque élément occupe deux colonnes */
+    grid-row: 2; /* Tous les éléments sont sur la deuxième ligne */
+  }
+  /*
+  .portfolio-page{
+    grid-area: porto;
+  }
+  .portfolio-page .card .im1{
+    grid-area: img1;
+
+  }
+  .portfolio-page .card .im2{
+    grid-area: img2;
+
+  }
+  .portfolio-page .card .im3{
+    grid-area: img3;
+
+  }
+
+*/
+
+.portfolio-page  img{
+  width:260px; 
+   
+     }
+     .portfolio-page .card{
+      background-color:white; 
+       width:260px; 
+       height:20px;
+   
+     }
+     .portfolio-page .card .space{
+      padding:10px;
+     }
 
 
 
