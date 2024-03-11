@@ -256,9 +256,9 @@ margin-top: 10px;;
 }
 .second-page img{
     position: absolute;
-    width:220px;
+    width:200px;
     height:300px; 
-    right:-20px;
+    right:-160px;
     top:-20px;
 }
 .flex{
@@ -272,7 +272,7 @@ margin-top: 10px;;
     background-color: var(--secondary-color);
     width:100px;
     height:350px;
-    right:-50px;
+    right:-169px;
     top:-40px;
 
 }
@@ -301,12 +301,13 @@ margin-top: 10px;;
 
   .portfolio-page{
     display: grid;
+    padding: 0 95px;
    /*
     grid-template-columns:auto   ;
     grid-template-rows:  auto auto  ;
     */
     height: 600px;
-    gap:10px;
+
     background-color:#f6f6f6; 
   }
 
@@ -348,12 +349,117 @@ margin-top: 10px;;
      .portfolio-page .card{
       background-color:white; 
        width:260px; 
-       height:20px;
-   
+       height:300px;
+   color: #abb42e;
+  
      }
      .portfolio-page .card .space{
       padding:10px;
+      color:black;
+    
      }
+     .portfolio-page .card .space p{
+      opacity: 0.7;
+      color: #30302eab;
+      margin-top: 5px;
+     }
+
+     /*about sec */
+     .about-sec{
+       /* position: relative;*/
+     }
+     .about-sec .flex{
+      display:flex;
+ 
+ margin-top: 70px;
+ margin-left:200px;
+ align-items: center;
+    /*  position: absolute;*/
+    
+     }
+     .about-sec .flex img{
+      width:200px;
+      height:300px;
+     }
+     .about-sec .flex img::after{
+      content: "";
+      width:30px;
+      height:100px;
+      background-color:var(--secondary-color) ;
+     }
+
+     .about-sec .flex .left-side {
+      max-width: 490px;
+      line-height: 1.8rem;
+     }
+     .about-sec .flex .left-side .one{
+      border-bottom: 3px solid var(--main-color) ;
+    padding-bottom:30px;
+     }
+
+     .about-sec .flex .left-side .two{
+      margin-top:50px;
+      opacity:0.7;
+     }
+
+
+
+
+     /*contact sec */
+     .contact-sec{
+      background-color: var(--section-background);
+     height:300px;
+     position: relative;
+     }
+
+     .contact-sec .center{
+     position: absolute;
+     
+     left:380px;
+     line-height: 1.8rem;
+     font-size: 30px;
+     font-weight: 800;
+     }
+     .contact-sec  .p-one{
+color: var(--secondary-color);
+margin-top:30px;
+     }
+
+     .contact-sec  .p-two{
+color: var(--main-color);
+margin-top:10px;
+align-items: center;
+position: absolute;
+left:60px;
+
+}
+
+.contact-sec  .flex-icon{
+  position: absolute;
+  font-size: 20px;
+  margin:15px 30px;
+  top:90px;
+  left:50px;
+  font-weight: 200;
+}
+
+.footer{
+  width:84%;
+  background-color: var(--secondary-color);
+  position: absolute;
+  font-weight: 800;
+  color: white;
+  height:80px;
+  
+
+
+}
+ .footer span{
+  color: var(--main-color);
+}
+
+
+
 
 
 
